@@ -1,1 +1,39 @@
-Hello World!
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Upvote Downvote</title>
+  <meta name="description" content="Which hand's the faster trigger?">
+  <meta name="author" content="Brocoli">
+
+  <meta property="og:title" content="Upvote Downvote">
+  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+  <meta property="og:description" content="Which hand's the faster trigger?">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="background">
+  <!-- your content here... -->
+  <link rel="preload" as="image" href="downvote.png">
+  <link rel="preload" as="image" href="upvote.png">
+  <img id="downvote" src="downvote.png" class="hidden">
+  <img id="upvote" src="upvote.png" class="hidden">
+  <div id="downvotekeyinput" class="bottomleft">Q</div>
+  <div id="upvotekeyinput" class="bottomright">P</div>
+  <p id="timer" class="timer"></p>
+  <div id="testoptions">
+    <p class="centerhighest">When the picture makes you want to run away or avoid it: DOWNVOTE<br> When the picture makes you want to be with it, or have it: UPVOTE</p>
+  	<button onclick="beginTest();" class="centerhigher">BEGIN TEST</button>
+    <button onclick="swapVoteButtons();" class="center">Swap Voting!</button>
+	<p id="results" class="lower"></p>
+  </div>
+  <img id="testimg" src="testimg/p0.png" class="hidden">
+  
+  <script src="code.js" defer></script>
+</body>
+</html>
