@@ -106,10 +106,14 @@ function userUpVote() {
 upvoteDownvoteButtons(false);
 
 document.addEventListener('keydown', function(event) {
-	if(!isTesting) return;
 	isRight = document.getElementById("upvote").className == "bottomright";
 	pushedp = event.keyCode == 80;
 	pushedq = event.keyCode == 81;
+	if(!isTesting) {
+		if(pushedp || pushedq) beginTest();
+		return;
+	}
+	
     if(pushedp && isRight || pushedq && !isRight) userUpVote();
 	else if(pushedq && isRight || pushedp && !isRight) userDownVote();
 }, true);
